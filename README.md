@@ -10,7 +10,7 @@ Since Twitter’s public API access was restricted, the project combined **publi
 - Public datasets provided millions of historical tweets, with **Dataset 2 (2021–2022)** as the main source due to its scale and consistent coverage.  
 - Additional scraping was implemented using headless browsers, rotating proxies, and query optimizations to bypass rate limits and avoid bans.  
 - In total, the processed dataset contained **over 22M tweets** before filtering.  
-![Alt text](images/all_files.png)
+<img src="images/all_files.png" alt="Emotion Distribution" style="width:50%;"/>
 ---
 
 ## Search Queries & Zipf’s Law Estimation  
@@ -34,7 +34,7 @@ Using this labeled data, two **BERTweet-based models** were trained:
 - **Emotion Classifier** → classified across 7 emotions with ~65% accuracy (confusions mostly between similar emotions).  
 
 Both models and datasets are publicly available on Hugging Face.  
-<img src="images/emotion_distribution.png" alt="Emotion Distribution" style="width:20%;"/>
+<img src="images/emotion_distribution.png" alt="Emotion Distribution" style="width:60%;"/>
 
 ---
 
