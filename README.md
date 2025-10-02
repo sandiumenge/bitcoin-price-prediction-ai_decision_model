@@ -10,7 +10,10 @@ Since Twitter’s public API access was restricted, the project combined **publi
 - Public datasets provided millions of historical tweets, with **Dataset 2 (2021–2022)** as the main source due to its scale and consistent coverage.  
 - Additional scraping was implemented using headless browsers, rotating proxies, and query optimizations to bypass rate limits and avoid bans.  
 - In total, the processed dataset contained **over 22M tweets** before filtering.  
-<img src="images/all_files.png" alt="Emotion Distribution" style="width:50%;"/>
+
+<p align="center">
+  <img src="images/all_files.png" alt="Emotion Distribution" style="width:70%;"/>
+</p>
 ---
 
 ## Search Queries & Zipf’s Law Estimation  
@@ -19,7 +22,10 @@ A key challenge was estimating the **daily tweet volume about Bitcoin**, since T
 - To reduce bias, queries were split using **neutral English words** (like *“the”*, *“with”*) with known frequencies.  
 - Applying **Zipf’s Law**, the project estimated daily tweet counts by extrapolating from low-probability word queries.  
 - This allowed scalable and cost-effective approximations of total daily activity, even when scraping only a subset.  
-![Alt text](images/tweet_count.png)
+
+<p align="center">
+  <img src="images/tweet_count.png" alt="Emotion Distribution" style="width:80%;"/>
+</p>
 ---
 
 ## Bot & Spam Detection + Emotion Classification  
@@ -33,9 +39,11 @@ Using this labeled data, two **BERTweet-based models** were trained:
 - **Spam/Bot/Human Classifier** → achieved ~88% accuracy.  
 - **Emotion Classifier** → classified across 7 emotions with ~65% accuracy (confusions mostly between similar emotions).  
 
-Both models and datasets are publicly available on Hugging Face.  
-<img src="images/emotion_distribution.png" alt="Emotion Distribution" style="width:60%;"/>
+Both models and datasets are publicly available on Hugging Face. 
 
+<p align="center">
+  <img src="images/emotion_distribution.png" alt="Emotion Distribution" style="width:70%;"/>
+</p>
 ---
 
 ## Features & Prediction Model  
@@ -46,13 +54,20 @@ The predictive model combines multiple sources of information:
 The decision model is built on an **LSTM architecture**:  
 - Two LSTM layers (64 and 32 units) capture temporal dependencies.  
 - Dropout & L2 regularization prevent overfitting.  
-- Final output layer provides **Buy / Sell / Hold** recommendations, directly optimized for **ROI** instead of regression accuracy.  
-![Alt text](images/input.png)
+- Final output layer provides **Buy / Sell / Hold** recommendations, directly optimized for **ROI** instead of regression accuracy. 
+
+<p align="center">
+  <img src="images/input.png" alt="Emotion Distribution" style="width:70%;"/>
+</p> 
 ---
 
 ## Results  
 - The model consistently outperformed **Buy & Hold** and random baselines, especially in downtrending markets.  
 - While Buy & Hold could lose ~50% in bearish periods, the decision model limited losses to around **–5%**.  
 - Emotion classification proved more informative than binary sentiment, confirming that **investor psychology** carries predictive value.  
-![Alt text](images/Prediction.png)
-![Alt text](images/all_em.png)
+<p align="center">
+  <img src="images/Prediction.png" alt="Emotion Distribution" style="width:70%;"/>
+</p> 
+<p align="center">
+  <img src="images/all_em.png" alt="Emotion Distribution" style="width:70%;"/>
+</p> 
