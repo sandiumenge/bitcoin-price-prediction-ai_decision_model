@@ -20,6 +20,8 @@ Traditional approaches often rely on simplified sentiment analysis or regression
 
 *(Insert key visual comparisons here — e.g. model vs Buy & Hold performance, emotion distribution)*  
 
+
+
 ## Future Directions  
 - Scale with **larger, multi-year datasets**.  
 - Incorporate **tweet reach/impact metrics** (likes, retweets, followers).  
