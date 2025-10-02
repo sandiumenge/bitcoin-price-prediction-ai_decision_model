@@ -34,8 +34,7 @@ Using this labeled data, two **BERTweet-based models** were trained:
 - **Emotion Classifier** → classified across 7 emotions with ~65% accuracy (confusions mostly between similar emotions).  
 
 Both models and datasets are publicly available on Hugging Face.  
-
-![Alt text](images/emotion_distribution.png)
+<img src="images/emotion_distribution.png" alt="Emotion Distribution" width="500"/>
 ---
 
 ## Features & Prediction Model  
